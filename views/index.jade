@@ -1,0 +1,90 @@
+extends layout
+
+block content
+  h1= title
+  p Gestion des congés du personnel
+
+  // Wrapper
+  #wrapper
+
+    // USER INFO
+    #userInfo
+      h2 Information employé
+      p
+        strong Nom prénom:
+        |  <span id='userInfoName'></span>
+        br
+        strong Age:
+        |  <span id='userInfoAge'></span>
+        br
+        strong Genre:
+        |  <span id='userInfoGender'></span>
+        br
+        strong Localisation:
+        |  <span id='userInfoLocation'></span>
+        br
+        strong Service:
+        |  <span id='userInfoBranch'></span>
+        br
+        strong Métier:
+        |  <span id='userInfoJob'></span>
+        br
+        strong Email:
+        |  <span id='userInfoEmail'></span>
+        br
+        strong N° Tel:
+        |  <span id='userInfoPhone'></span>
+        br
+        strong Début congé:
+        |  <span id='userInfoLeaveStart'></span>
+        br
+        strong Fin congé:
+        |  <span id='userInfoLeaveEnd'></span>
+        
+    // /USER INFO
+
+    // USER LIST
+    h2 Liste des employés
+    #userList
+      table
+        thead
+          th ID
+          th Nom prénom
+          th Genre
+          th Age
+          th Localisation
+          th Service
+          th Métier
+          th Email
+          th N° Tel
+          th Début congés
+          th Fin congés
+          th Editer
+          th Supprimer
+    
+        tbody
+    // /USER LIST
+
+    // ADD USER
+    h2 Ajouter un employé
+    #addUser
+      fieldset
+        // input#inputUserName(type='text', placeholder='Username')
+        input#inputUserName(type='text', placeholder='Nom prénom')
+        input#inputUserGender(type='text', placeholder='Genre')
+        input#inputUserAge(type='number', placeholder='Age', min='15', max='100')
+        br
+        input#inputUserLocation(type='text', placeholder='Lieu de travail')
+        input#inputUserBranch(type='text', placeholder='Service')
+        input#inputUserJob(type='text', placeholder='Intitulé métier')
+        br
+        input#inputUserEmail(type='email', placeholder='Email')
+        input#inputUserPhone(type='text', placeholder='Numéro de téléphone' pattern='([0-9]{10}')
+        br
+        button#btnAddUser Créer
+        br
+        br
+
+    // /ADD USER
+
+  // /WRAPPER
